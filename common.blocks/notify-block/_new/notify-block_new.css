@@ -1,0 +1,15 @@
+.notify-block_new::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #f14e95;
+    content: '5';
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
+}

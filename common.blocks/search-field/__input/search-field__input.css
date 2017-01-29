@@ -1,0 +1,11 @@
+.search-field__input {
+  border: 1px solid #ededed;
+  border-width: 1px 0 1px 1px;
+  height: 37px;
+  width: 250px;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+  vertical-align: top;
+  font-size: 12px;
+  padding-left: 10px;
+}

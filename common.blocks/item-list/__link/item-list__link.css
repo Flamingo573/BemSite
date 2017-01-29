@@ -1,0 +1,13 @@
+.item-list__link {
+  display: block;
+  margin: 0 10px;
+  padding-left: 40px;
+  border-bottom: 1px solid #384048;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.item-list__item_active .item-list__link {
+  margin-left: 5px;
+}

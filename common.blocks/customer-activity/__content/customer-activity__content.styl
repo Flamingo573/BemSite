@@ -1,0 +1,29 @@
+.customer-activity
+
+  &__overview
+  &__orders
+  &__payments
+  &__interactions
+  &__feedback
+    display none
+
+  &__content
+    display: flex
+    flex-direction column
+    background #ededed
+    padding 60px 25px 30px 25px
+
+    &_on_overview ^[0]__overview
+      display flex
+
+    &_on_orders ^[0]__orders
+      display block
+
+    &_on_payments ^[0]__payments
+      display block
+
+    &_on_interactions ^[0]__interactions
+      display block
+
+    &_on_feedback ^[0]__feedback
+      display block

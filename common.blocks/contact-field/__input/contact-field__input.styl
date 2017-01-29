@@ -1,0 +1,24 @@
+.contact-field
+  &__input
+    width 275px
+    outline none
+    font-size 14px
+    color #442a9d
+    font-weight bold
+    border: none
+
+
+    &:hover ~ ^[0]__pencil-line
+    &:focus ~ ^[0]__pencil-line
+      border-bottom 1px solid #d4d4d4
+
+
+    &:focus ~ ^[0]__pencil-line::before
+    &:valid ~ ^[0]__pencil-line::before
+      top 0
+
+
+
+    &:hover ~ ^[0]__pencil-line::after
+    &:focus ~ ^[0]__pencil-line::after
+      display block

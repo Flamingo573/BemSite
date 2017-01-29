@@ -1,0 +1,10 @@
+.search-field__search-btn {
+    background: transparent url('search-btn-icon.png') no-repeat 30% 50%;
+    border: 1px solid #ededed;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    height: 37px;
+    width: 37px;
+    vertical-align: top;
+}

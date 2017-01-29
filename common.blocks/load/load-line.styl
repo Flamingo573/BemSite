@@ -1,0 +1,20 @@
+.load
+  display flex
+  max-width 415px;
+  width 100%
+
+  align-items center
+  &__line
+    width 90%
+    height 10px
+    background #ededed
+    border-radius 5px
+
+    ~/__inside-line
+      width 0
+      height @height
+      border-radius @border-radius
+      background #ffc12d
+
+  &__percent
+    margin-left 15px

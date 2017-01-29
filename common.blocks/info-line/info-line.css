@@ -1,0 +1,7 @@
+.info-line {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 7px 25px;
+  background: #fff;
+}
