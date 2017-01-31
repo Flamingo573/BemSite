@@ -12,14 +12,11 @@ const path = require('path');
 const params = {
     out: './public',
     htmlSrc: './public/index.html',
-    bemjsonSrc: 'index.bemjson.js',
-    levels: ['common.blocks']
+    bemjsonSrc: './index.bemjson.js',
+    levels: ['./common.blocks']
 };
 
 const getFileNamesJson = bemjson2bl.getFileNames(params);
-// const getFileNamesHtml= html2bl.getFileNames(params);
-
-
 
 gulp.task('bemhtml', function(callback) {
     getFileNamesJson.then(function(file) {
@@ -29,7 +26,7 @@ gulp.task('bemhtml', function(callback) {
             .pipe($.concat('index.bemhtml.js'))
             .pipe(gulp.dest('./'))
             .on('end', callback);
-    })
+    });
 
 });
 
@@ -39,7 +36,9 @@ gulp.task('html', function(callback) {
         .pipe($.plumber({
             errorHandler: $.notify.onError()
         }))
-        .pipe($.bemjson2htmlUpdated({template: 'index.bemhtml.js'}))
+        .pipe($.bemjson2htmlUpdated({
+            template: 'index.bemhtml.js'
+        }))
         .pipe($.rename('index.html'))
         .pipe(gulp.dest('./public'))
 });
@@ -74,9 +73,10 @@ gulp.task('images', (callback) => {
                 file.base = file.dirname
                 callback(null, file)
             }))
+            .pipe($.imagemin())
             .pipe(gulp.dest('./public/image'))
             .on('end', callback)
-    })
+    });
 });
 
 gulp.task('js', (callback) => {
@@ -89,6 +89,15 @@ gulp.task('js', (callback) => {
                 callback(null, file)
             }))
             .pipe($.concat('app.js'))
+            .pipe($.babel({
+                presets: ['es2015']
+            }))
+            .pipe($.minify({
+                ext: {
+                    min: '.min.js'
+                },
+                noSource: true
+            }))
             .pipe(gulp.dest('./public'))
             .on('end', callback)
     });
@@ -97,7 +106,7 @@ gulp.task('js', (callback) => {
 gulp.task('watch', function() {
     gulp.watch('{*.bemjson.js,common.blocks/**/*.bemhtml.js}', gulp.series('bemhtml', 'html'));
     gulp.watch('./common.blocks/**/*.{styl,css}', gulp.series('css'));
-    gulp.watch(['./common.blocks/**/*.js', '!./common.blocks/**/*.bemhtml'], gulp.series('js'))
+    gulp.watch(['common.blocks/**/*.js', '!common.blocks/**/*.bemhtml.js'], gulp.series('js'))
 });
 
 gulp.task('bs', function() {

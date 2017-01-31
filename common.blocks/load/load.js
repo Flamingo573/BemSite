@@ -4,20 +4,20 @@ modules.define('load', ['i-bem__dom', 'Animate'], function(provide, BEMDOM, Anim
         onSetMod: {
             js: {
                 inited: function() {
-                  this.loadStart()
+                  this.loadStart();
                 }
             }
         },
         loadStart: function() {
               this.animate = new Animate();
 
-              this.animate.play(this.drawFunc.bind(this), 1000)
+              this.animate.play(this.drawFunc.bind(this), 1000);
               this.elem('inside-line').animate({width: a + '%'}, 1000);
         },
         drawFunc: function(time) {
           let num = Math.ceil(time * 90);
 
           if (num > 0 ) this.elem('percent').text(`${num}%`);
-        }
+        } 
     }));
 });

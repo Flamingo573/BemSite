@@ -29,7 +29,7 @@
                 {
                     tag: 'script',
                     attrs: {
-                        src: 'app.js'
+                        src: 'app.min.js'
                     }
                 }
 
@@ -141,10 +141,6 @@
                     content: [{
                             block: 'info-line',
                             tag: 'header',
-                            mix: {
-                                block: 'main-content',
-                                elem: 'info-line'
-                            },
                             content: [{
                                     block: 'breadcrumb',
                                     tag: 'ul',
@@ -371,11 +367,7 @@
                             block: 'customer-activity',
                             js: true,
                             content: [{
-                                    elem: 'tabs',
-                                    mix: {
-                                        block: 'main-content',
-                                        elem: 'tabs'
-                                    },
+                                    elem: 'tabs',                                    
                                     content: [{
                                             elem: 'tab',
                                             content: 'OVERVIEW',

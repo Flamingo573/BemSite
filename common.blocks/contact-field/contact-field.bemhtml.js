@@ -9,7 +9,7 @@ block('contact-field')(
       },
       {
         elem: 'pencil-line'
-      }
+      } 
     ];
   })
 );
