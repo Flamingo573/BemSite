@@ -55,7 +55,7 @@ gulp.task('css', (callback) => {
             .pipe($.stylus())
             .pipe($.concat('styles.css'))
             .pipe($.cssUrlAdjuster({
-                prepend: '/image/'
+                prepend: 'image/'
             }))
             .pipe($.autoprefixer())
             .pipe(gulp.dest('./public'))
