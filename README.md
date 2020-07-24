@@ -6,7 +6,7 @@
 
 * [bemjson](https://github.com/Flamingo573/BemSite/blob/master/index.bemjson.js)
 * [bemhtml](https://github.com/Flamingo573/BemSite/blob/master/common.blocks/contact-field/contact-field.bemhtml.js)
-* [Деклорация JS](https://github.com/Flamingo573/BemSite/blob/master/common.blocks/customer-activity/customer-activity.js)
+* [Декларация JS](https://github.com/Flamingo573/BemSite/blob/master/common.blocks/customer-activity/customer-activity.js)
 * [stylus](https://github.com/Flamingo573/BemSite/blob/master/common.blocks/load/load-line.styl)
 
 ##Запуск сборки
